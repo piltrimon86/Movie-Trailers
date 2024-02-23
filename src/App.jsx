@@ -129,7 +129,7 @@ const App = () => {
                                     />
                                     <button
                                         onClick={() => setPlaying(false)}
-                                        className="boton_trailer">
+                                        className="boton_trailer_close">
                                         Close
                                     </button>
                                 </>
@@ -138,7 +138,7 @@ const App = () => {
                                     <div className="">
                                         {trailer ? (
                                             <button
-                                                className="boton_trailer"
+                                                className="boton_trailer_play"
                                                 onClick={() => setPlaying(true)}
                                                 type="button">
                                                 Play Trailer

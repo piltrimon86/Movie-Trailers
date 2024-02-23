@@ -20,8 +20,6 @@ body {
 }
 
 .search {
-    /* margin-left: 20px;
-    margin-bottom: 10px; */
     padding-left: 20px;
     padding-bottom: 10px;
 }
@@ -50,12 +48,22 @@ body {
     align-items: flex-end;
 }
 
-.boton_trailer {
+.boton_trailer_play {
     background-color: #0f1014;
     color: white;
     outline: none;
     border: 1px solid white;
     padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.boton_trailer_close {
+    background-color: #0f1014;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    /* padding: 10px 15px; */
     cursor: pointer;
     margin-bottom: 10px;
 }
