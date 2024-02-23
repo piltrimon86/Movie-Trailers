@@ -84,13 +84,14 @@ const App = () => {
 
             {/* EL BUSCADOR */}
 
-            <form className="container mb-4" onSubmit={searchMovies}>
+            <form className="search" onSubmit={searchMovies}>
                 <input
+                    className="search_input"
                     type="text"
-                    placeholder="search"
+                    placeholder="Search"
                     onChange={(e) => setSearchKey(e.target.value)}
                 />
-                <button className="btn btn-primary">Search</button>
+                <button className="search_boton">Search</button>
             </form>
 
             {/* CONTENEDOR DEL BANNER Y DEL REPRODUCTOR DE VÍDEO */}
@@ -128,7 +129,7 @@ const App = () => {
                                     />
                                     <button
                                         onClick={() => setPlaying(false)}
-                                        className="boton">
+                                        className="boton_trailer">
                                         Close
                                     </button>
                                 </>
@@ -137,7 +138,7 @@ const App = () => {
                                     <div className="">
                                         {trailer ? (
                                             <button
-                                                className="boton"
+                                                className="boton_trailer"
                                                 onClick={() => setPlaying(true)}
                                                 type="button">
                                                 Play Trailer
@@ -160,7 +161,7 @@ const App = () => {
             </div>
 
             {/*CONTENEDOR PARA MOSTRAR LOS POSTER Y LAS PELÍCULAS EN LA PETICIÓN A LA API*/}
-            <div className="mt-3 movies">
+            <div className="movies mt-3">
                 <div className="row">
                     {movies.map((movie) => (
                         <div
