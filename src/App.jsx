@@ -4,7 +4,7 @@ import './App.css'
 import { useState } from 'react'
 import YouTube from 'react-youtube'
 
-function App() {
+const App = () => {
     const API_URL = 'https://api.themoviedb.org/3'
     const API_KEY = '4f5f43495afcc67e9553f6c684a82f84'
     const IMAGE_PATH = 'https://image.tmdb.org/t/p/original'
@@ -76,7 +76,11 @@ function App() {
 
     return (
         <div>
-            <h2 className="text-center mt-5 mb-5">Trailer Popular Movies</h2>
+            <div className="page">
+                <h2 className=" tittle text-center mt-5 mb-5">
+                    Trailer Popular Movies
+                </h2>
+            </div>
 
             {/* EL BUSCADOR */}
 
@@ -91,7 +95,7 @@ function App() {
 
             {/* CONTENEDOR DEL BANNER Y DEL REPRODUCTOR DE VÍDEO */}
 
-            <div>
+            <div className="banner">
                 <main>
                     {movie ? (
                         <div
@@ -156,12 +160,12 @@ function App() {
             </div>
 
             {/*CONTENEDOR PARA MOSTRAR LOS POSTER Y LAS PELÍCULAS EN LA PETICIÓN A LA API*/}
-            <div className="container mt-3">
+            <div className="mt-3 movies">
                 <div className="row">
                     {movies.map((movie) => (
                         <div
                             key={movie.id}
-                            className="col-md-4 mb-3"
+                            className="col-md-3 mb-3"
                             onClick={() => selectMovie(movie)}>
                             <img
                                 src={`${URL_IMAGE + movie.poster_path}`}
@@ -169,7 +173,9 @@ function App() {
                                 height={600}
                                 width="100%"
                             />
-                            <h4 className="text-center">{movie.title}</h4>
+                            <h4 className="movie_tittle text-center">
+                                {movie.title}
+                            </h4>
                         </div>
                     ))}
                 </div>
