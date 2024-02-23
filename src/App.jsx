@@ -166,7 +166,7 @@ const App = () => {
                     {movies.map((movie) => (
                         <div
                             key={movie.id}
-                            className="col-md-3 mb-3"
+                            className="movies_card col-md-3 mb-3"
                             onClick={() => selectMovie(movie)}>
                             <img
                                 src={`${URL_IMAGE + movie.poster_path}`}
