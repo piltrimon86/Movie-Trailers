@@ -174,7 +174,7 @@ const App = () => {
                                 height={600}
                                 width="100%"
                             />
-                            <h4 className="movie_tittle text-center">
+                            <h4 className="movie_tittle text-center mt-2">
                                 {movie.title}
                             </h4>
                         </div>
