@@ -101,3 +101,14 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .movies_card {
+        width: calc(50% - 20px);
+    }
+
+    .search_input {
+        width: 80%;
+        max-width: none;
+    }
+}
