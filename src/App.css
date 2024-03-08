@@ -104,11 +104,15 @@ body {
 
 @media screen and (max-width: 768px) {
     .movies_card {
-        width: calc(50% - 20px);
+        width: calc(52% - 20px);
     }
 
     .search_input {
         width: 80%;
         max-width: none;
+    }
+
+    .viewtrailer {
+        width: calc(100% - 13px);
     }
 }
